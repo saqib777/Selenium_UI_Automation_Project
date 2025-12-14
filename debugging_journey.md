@@ -231,8 +231,3 @@ We are now ready to move into implementing real UI automation logic.
 
 ---
 
-# Next Step (Day 3)
-
-Implement real locators + actions + assertions for Login.
-
----

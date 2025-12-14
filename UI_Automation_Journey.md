@@ -1,4 +1,4 @@
-## UI Automation Project – Notes & Development Journal
+## UI Automation Project - Notes & Development Journal
 
 ### 1. Why This File Exists
 

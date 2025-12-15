@@ -220,14 +220,113 @@ Pytest executed the test without failing because there were no Selenium operatio
 
 ---
 
-# Current Status
+## DATE: 15-12-2025
 
-✔ Framework loads
-✔ Tests discovered
-✔ Selenium fixture working
-✔ First test passed successfully
-
-We are now ready to move into implementing real UI automation logic.
+This document captures all the errors we faced today during Day 3 of the Selenium UI Automation journey, along with the exact reason each error occurred and how we fixed it. This is intentionally written in plain language, focusing on understanding rather than theory.
 
 ---
 
+ERROR 1: Test failed even though code ran successfully
+
+What we saw:
+The test executed, browser opened, but the assertion failed saying login was not successful.
+
+Why it happened:
+At this stage, the Page Object methods (enter_username, enter_password, click_login) still contained only `pass`. That meant Selenium was not performing any real action even though the test looked correct.
+
+Fix:
+We started implementing Page Object methods one by one instead of all at once. This helped us understand exactly which user action was missing.
+
+Learning:
+A test running does not mean a test is doing anything. Page Objects must contain real Selenium interactions for assertions to make sense.
+
+---
+
+ERROR 2: Assertion failed – "Accounts Overview not found"
+
+What we saw:
+AssertionError stating that Accounts Overview text was not found on the page.
+
+Why it happened:
+The login never actually completed because only username was implemented initially. Password entry and login click were still missing.
+
+Fix:
+We implemented enter_password using the correct locator and reran the test.
+
+Learning:
+Incremental implementation is the right approach. Each failure tells you which step is still incomplete.
+
+---
+
+ERROR 3: Login button click caused TimeoutException
+
+What we saw:
+TimeoutException while waiting for the login button to be clickable using XPath.
+
+Why it happened:
+The locator used for the login button was brittle. Selenium kept waiting because the element was either not clickable yet or slightly different in the DOM.
+
+Fix:
+We stopped relying on clicking the login button and instead submitted the form directly using:
+`driver.find_element(By.NAME, "username").submit()`
+
+Learning:
+In real-world automation, form submission is often more stable than clicking buttons. Avoid fragile locators when a simpler interaction exists.
+
+---
+
+ERROR 4: TimeoutException when checking successful login
+
+What we saw:
+TimeoutException while waiting for either page text or URL change after login.
+
+Why it happened:
+The success condition we were waiting for was either incorrect or too strict. UI text is not always reliable and can vary.
+
+Fix:
+We refined the success check and aligned it with a stable post-login behavior (page load and successful navigation).
+
+Learning:
+Success conditions should be based on stable application behavior (URL change, page state), not cosmetic UI text.
+
+---
+
+ERROR 5: Duplicate method definitions inside Page Object
+
+What we saw:
+Login behavior was inconsistent even after implementing methods correctly.
+
+Why it happened:
+The same method (click_login) was defined twice in the Page Object. Python silently overrides earlier definitions, leading to confusion.
+
+Fix:
+We cleaned up the Page Object to ensure every method exists exactly once.
+
+Learning:
+Python will not warn you about duplicate method definitions. Clean, intentional code structure matters in automation frameworks.
+
+---
+
+FINAL RESULT
+
+After fixing all the above issues:
+
+* Login flow executed fully
+* Form submission worked reliably
+* Explicit waits behaved as expected
+* Assertion passed
+* Test result showed PASSED
+
+This confirms that the framework, Page Object Model, and test design are now working correctly.
+
+---
+
+KEY TAKEAWAYS FROM DAY 3
+
+1. Selenium automation is not about writing long scripts every time. It is about building reusable behavior.
+2. Page Objects are written once and reused across many tests.
+3. Failures are guidance, not setbacks.
+4. Stable locators and stable success conditions matter more than fancy assertions.
+5. Incremental development prevents hidden bugs and confusion.
+
+---

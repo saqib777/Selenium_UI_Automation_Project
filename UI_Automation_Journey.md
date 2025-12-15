@@ -1,6 +1,6 @@
 <div align="center">
   
-  #UI Automation Journal
+  # UI Automation Journal
 
 </div>
 

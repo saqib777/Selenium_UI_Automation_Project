@@ -1,6 +1,6 @@
 <div align="enter"
   
-  ## UI Automation Journal
+  # UI Automation Journal
 
 </div>
 

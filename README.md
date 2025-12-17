@@ -61,3 +61,79 @@ Selenium_UI_Automation_Project/
 ├── debugging_journey.md
 
 ```
+
+
+### File Details
+
+- **README.md**  
+  High-level overview of the project and its purpose.
+
+- **UI_Automation_Journey.md**  
+  A detailed log of how I approached automation, what I learned, and how my understanding evolved.
+
+- **debugging_journey.md**  
+  Focused documentation on automation failures, root cause analysis, and fixes.
+
+---
+
+## Tools & Technologies Used
+
+- Selenium WebDriver
+- Java / Python (based on test setup)
+- Browser automation (Chrome)
+- Git & GitHub for version control
+- Markdown for documentation
+
+---
+
+## Visuals (Automation in Action)
+
+Below are placeholders where I add screenshots from test execution, debugging, and reports.
+
+### Test Case Execution
+![Test Case Execution](assets/test-execution.png)
+
+### Automation Logs
+![Automation Logs](assets/logs.png)
+
+### Debugging a Failure
+![Debugging Failure](assets/debugging.png)
+
+(Visuals are added progressively as the project evolves.)
+
+---
+
+## Why This Project Matters
+
+This project represents:
+- Consistency in learning automation
+- Willingness to document failures, not hide them
+- A clear transition from manual testing mindset to automation thinking
+
+Instead of copying frameworks, I focused on **understanding why automation behaves the way it does**.
+
+---
+
+## Current Status
+
+- Project is actively evolving
+- Automation coverage is being expanded
+- Documentation is continuously updated as learning improves
+
+---
+
+## Next Steps
+
+- Improve test structure and reusability
+- Introduce better waits and synchronization strategies
+- Explore framework-level concepts once fundamentals are solid
+- Add reporting and execution summaries
+
+---
+
+## Closing Note
+
+This repository reflects my genuine effort to grow into a strong automation engineer.  
+It shows not only what I know, but **how I think, learn, and improve**.
+
+

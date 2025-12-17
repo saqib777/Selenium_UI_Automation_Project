@@ -53,4 +53,9 @@ This helped me understand automation as a **process**, not just code execution.
 ---
 
 ## Repository Structure
+Selenium_UI_Automation_Project/
+│
+├── README.md
+├── UI_Automation_Journey.md
+├── debugging_journey.md
 

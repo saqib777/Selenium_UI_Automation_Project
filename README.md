@@ -1,4 +1,7 @@
+<div align="center">
+  
 # Selenium UI Automation Project
+</div>
 
 This repository documents my hands-on journey into UI automation using Selenium.  
 It is not just a collection of scripts, but a learning-driven project where I explored automation design, debugging strategies, and real-world testing challenges step by step.

@@ -62,7 +62,7 @@ Selenium_UI_Automation_Project/
 ├── README.md
 ├── UI_Automation_Journey.md
 ├── debugging_journey.md
-├── Codes
+├── Codes/
     ├── pages/
     ├── login_page.py
     ├── accounts_page.py

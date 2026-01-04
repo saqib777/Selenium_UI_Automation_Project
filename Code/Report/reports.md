@@ -98,25 +98,18 @@ Each test is independent, repeatable, and stable.
 
 During the project, several real-world issues were encountered:
 
-Import errors due to Python path resolution
-
-Duplicate methods causing unexpected overrides
-
-Assertion failures due to incorrect expectations
-
-Timeout exceptions caused by missing waits
-
-Internal application errors affecting negative tests
+- Import errors due to Python path resolution
+- Duplicate methods causing unexpected overrides
+- Assertion failures due to incorrect expectations
+- Timeout exceptions caused by missing waits
+- Internal application errors affecting negative tests
 
 All issues were resolved by:
 
-Proper package initialization
-
-Consistent method naming
-
-Explicit waits (WebDriverWait)
-
-Accurate assertions based on real UI behavior
+- Proper package initialization
+- Consistent method naming
+- Explicit waits (WebDriverWait)
+- Accurate assertions based on real UI behavior
 
 These problems mirror what happens in actual automation projects.
 
@@ -124,32 +117,26 @@ These problems mirror what happens in actual automation projects.
 
 By completing this project, the following skills were developed:
 
-Writing Selenium tests from scratch, not record-and-playback
-
-Understanding why Selenium requires more code than tools like Katalon
-
-Building a scalable automation framework
-
-Debugging real Selenium + Pytest errors
-
-Thinking like an SDET, not just a tester
+- Writing Selenium tests from scratch, not record-and-playback
+- Understanding why Selenium requires more code than tools like Katalon
+- Building a scalable automation framework
+- Debugging real Selenium + Pytest errors
+- Thinking like an SDET, not just a tester
 
 This project bridges the gap between tool usage and engineering mindset.
 
 9. Project Status
 
-Status: ✅ Completed
+Status: Completed
 Framework: Stable
 Tests: Executable end-to-end
 Readiness: Portfolio-ready
 
 This project is suitable to:
 
-Showcase on GitHub
-
-Discuss in interviews
-
-Extend with more modules (Transfer Funds, Admin, API, etc.)
+- Showcase on GitHub
+- Discuss in interviews
+- Extend with more modules (Transfer Funds, Admin, API, etc.)
 
 10. Final Note
 
@@ -159,4 +146,3 @@ This project proves that:
 - You understand Selenium beyond basic scripts
 - You can handle real-world automation complexity
 
-From here, extending this into reporting, CI/CD, or Playwright will be much smoother.

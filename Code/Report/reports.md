@@ -104,3 +104,109 @@ parabank_automation/
 └── requirements.txt
 
 ```
+
+5. Design Approach (Why This Works)
+
+Page Object Model ensures UI locators and actions live in one place
+
+Tests remain clean, readable, and focused only on validation
+
+Fixtures manage browser setup and teardown
+
+Explicit waits handle dynamic elements reliably
+
+Reusable methods reduce duplicate code
+
+This is the same approach used in enterprise automation frameworks.
+
+6. Test Coverage Implemented
+Login Module
+
+Valid login verification
+
+Invalid login error validation
+
+Assertion on successful navigation
+
+Accounts Module
+
+Accounts Overview page load verification
+
+Presence of user accounts
+
+Registration Module
+
+Register page accessibility validation
+
+Bill Pay Module
+
+Bill Pay page navigation validation
+
+Each test is independent, repeatable, and stable.
+
+7. Challenges Faced & Resolutions
+
+During the project, several real-world issues were encountered:
+
+Import errors due to Python path resolution
+
+Duplicate methods causing unexpected overrides
+
+Assertion failures due to incorrect expectations
+
+Timeout exceptions caused by missing waits
+
+Internal application errors affecting negative tests
+
+All issues were resolved by:
+
+Proper package initialization
+
+Consistent method naming
+
+Explicit waits (WebDriverWait)
+
+Accurate assertions based on real UI behavior
+
+These problems mirror what happens in actual automation projects.
+
+8. Learning Outcomes
+
+By completing this project, the following skills were developed:
+
+Writing Selenium tests from scratch, not record-and-playback
+
+Understanding why Selenium requires more code than tools like Katalon
+
+Building a scalable automation framework
+
+Debugging real Selenium + Pytest errors
+
+Thinking like an SDET, not just a tester
+
+This project bridges the gap between tool usage and engineering mindset.
+
+9. Project Status
+
+Status: ✅ Completed
+Framework: Stable
+Tests: Executable end-to-end
+Readiness: Portfolio-ready
+
+This project is suitable to:
+
+Showcase on GitHub
+
+Discuss in interviews
+
+Extend with more modules (Transfer Funds, Admin, API, etc.)
+
+10. Final Note
+
+This project proves that:
+
+- You can design automation, not just follow tutorials
+- You understand Selenium beyond basic scripts
+- You can handle real-world automation complexity
+
+From here, extending this into reporting, CI/CD, or Playwright will be much smoother.

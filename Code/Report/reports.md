@@ -1,6 +1,4 @@
-Alright. Below is a clean, complete project report you can directly use as your final documentation / README / project report. It’s written like a real project wrap-up, not academic fluff.
-
-Selenium UI Automation Project Report
+# Selenium UI Automation Project Report
 
 Project Name: ParaBank UI Automation
 Tool Stack: Selenium + Python + Pytest

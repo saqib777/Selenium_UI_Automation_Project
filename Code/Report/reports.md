@@ -1,7 +1,9 @@
 # Selenium UI Automation Project Report
 
 Project Name: ParaBank UI Automation
+
 Tool Stack: Selenium + Python + Pytest
+
 Framework Pattern: Page Object Model (POM)
 
 1. Project Objective

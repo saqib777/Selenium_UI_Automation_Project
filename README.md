@@ -62,6 +62,30 @@ Selenium_UI_Automation_Project/
 ├── README.md
 ├── UI_Automation_Journey.md
 ├── debugging_journey.md
+├── Codes
+    ├── pages/
+    ├── login_page.py
+    ├── accounts_page.py
+    ├── register_page.py
+    └── bill_pay_page.py
+    |
+    ├── tests/
+    ├── test_login.py
+    ├── test_accounts.py
+    ├── test_register.py
+    └── test_bill_pay.py
+    │
+    ├── utils/
+    └── config.py
+    │
+    ├── conftest.py
+    ├── pytest.ini
+    └── requirements.txt
+
+
+
+
+
 
 ```
 

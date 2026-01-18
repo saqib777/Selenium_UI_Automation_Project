@@ -171,4 +171,166 @@ Day 3: ███████░░░░ 70%
 
 ---
 
-*Next entries will be added above this line.*
+
+## Project Objective
+
+The goal of this project was to build a real-world Selenium UI automation framework using **Python + PyTest + Page Object Model (POM)**. The project automates critical user journeys of the ParaBank demo application such as login, registration, account overview, and bill payment.
+
+The intent was not speed, but clarity—understanding *why* things work and *why* they fail.
+
+---
+
+## Initial Setup & Framework Design
+
+I started by setting up a clean project structure with separate folders for:
+
+* `pages` – Page Object classes
+* `tests` – Test cases
+* `utils` – Configuration helpers
+* `reports` / `screenshots` – Execution artifacts
+
+I used **pytest** as the test runner and **conftest.py** for driver setup and teardown.
+
+Key early learning:
+
+* Selenium works best when combined with explicit waits
+* Folder structure matters more than it seems at the beginning
+
+---
+
+## Login Automation Journey
+
+### What I Implemented
+
+* Valid login test
+* Invalid login test
+* LoginPage class with reusable actions
+
+### Issues Faced
+
+* `AttributeError` due to missing methods
+* `TimeoutException` because elements were not ready
+* False negatives due to checking page source instead of UI state
+
+### Fixes Applied
+
+* Introduced `WebDriverWait`
+* Replaced page source checks with element-based validation
+* Centralized login logic into `login_as()`
+
+### Key Lesson
+
+> If Selenium fails randomly, the problem is almost always **timing**, not logic.
+
+---
+
+## PyTest & Fixture Challenges
+
+### Issues Faced
+
+* `ModuleNotFoundError: pages`
+* `NameError: LoginPage not defined`
+* Tests not being collected
+
+### Root Cause
+
+* Python import paths were not configured properly
+* Missing `__init__.py` files
+
+### Fix
+
+* Added `__init__.py` everywhere
+* Updated `conftest.py` to manage driver lifecycle cleanly
+
+### Key Lesson
+
+> PyTest is strict. One small import mistake breaks everything.
+
+---
+
+## Accounts Overview Automation
+
+### What I Implemented
+
+* Verified Accounts Overview page loads
+* Checked presence of account links
+
+### Issues Faced
+
+* Tests failed after login even though login passed
+* Assertions executed before page load
+
+### Fix
+
+* Added explicit waits in `AccountsPage`
+* Validated UI elements instead of assumptions
+
+---
+
+## Error Handling & Debugging Phase
+
+This was the most valuable part of the project.
+
+Errors I encountered repeatedly:
+
+* `TimeoutException`
+* `AssertionError`
+* `SyntaxError: return outside function`
+
+Instead of rushing fixes, I paused and:
+
+* Read full stack traces
+* Printed intermediate values
+* Verified locators manually in browser
+
+### Key Lesson
+
+> Debugging Selenium teaches patience more than coding.
+
+---
+
+## Page Object Model Realization
+
+Initially, I wrote Selenium commands directly in tests.
+
+Later, I refactored:
+
+* All locators → Page classes
+* All actions → Page methods
+* Tests became clean and readable
+
+This was the turning point where the framework *felt professional*.
+
+---
+
+## Test Coverage Achieved
+
+At the end of the project, I had automated:
+
+* Login (valid & invalid)
+* Account overview validation
+* Registration flow (basic)
+* Bill payment (basic navigation)
+
+Each test is independent, readable, and reusable.
+
+---
+
+## What This Project Taught Me
+
+* Selenium is powerful but unforgiving
+* Framework design saves time later
+* Writing fewer, stable tests is better than many flaky ones
+* Real learning happens when tests fail
+
+---
+
+## Final Reflection
+
+This project is not just automation code. It is a **debugging diary**, a **design exercise**, and a **confidence builder**.
+
+I now understand how real automation frameworks are built, broken, and stabilized.
+
+---
+
+*End of Journal*

@@ -1,4 +1,4 @@
-# Debugging Journey – Selenium UI Automation Project
+# Debugging Journey - Selenium UI Automation Project
 
 This document captures all the major issues, errors, and bugs faced during the development of the ParaBank Selenium UI Automation project, along with their root causes and the exact fixes applied. This serves as a practical debugging reference and a learning log.
 
